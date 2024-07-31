@@ -1,5 +1,5 @@
 import 'package:e_commerce/core/functions/on_generate_routes.dart';
-import 'package:e_commerce/features/presention/splash_view.dart';
+import 'package:e_commerce/features/splash/presention/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
