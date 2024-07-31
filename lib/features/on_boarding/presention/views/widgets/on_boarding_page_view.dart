@@ -8,20 +8,23 @@ class OnBoardingPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageView(
-      scrollDirection: Axis.horizontal,
       children: const [
         PageViewItem(
             image: Assets.assetsImagesPageViewIcon1,
             backGroundImage: Assets.assetsImagesPageViewBackground1,
-            title: Row(
-              children: [
-                Text('مرحبًا بك في '),
-                Text('Fruit'),
-                Text('HUB'),
-              ]
-            ),
+            title: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text('مرحبًا بك في '),
+              Text('Fruit'),
+              Text('HUB'),
+            ]),
             subtitle:
-                "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.")
+                "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),
+        PageViewItem(
+            image: Assets.assetsImagesPageViewIcon2,
+            backGroundImage: Assets.assetsImagesPageViewBackground2,
+            title:  Text('ابحث وتسوق'),
+            subtitle:
+              " نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية")
       ],
     );
   }
