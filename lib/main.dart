@@ -1,3 +1,5 @@
+import 'package:e_commerce/core/functions/on_generate_routes.dart';
+import 'package:e_commerce/features/presention/splash_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +11,10 @@ class ECommerce extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const MaterialApp(
+      onGenerateRoute: onGenerateRoute,
+      initialRoute: SplashView.routeName,
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
