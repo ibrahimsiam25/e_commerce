@@ -1,4 +1,4 @@
-import 'package:e_commerce/features/on_boarding/presention/views/on_boarding_View.dart';
+import 'package:e_commerce/features/on_boarding/presention/views/on_boarding_view.dart';
 import 'package:e_commerce/features/splash/presention/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
