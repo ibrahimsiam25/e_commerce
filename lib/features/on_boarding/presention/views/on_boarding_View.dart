@@ -6,6 +6,9 @@ class OnBoardingView extends StatelessWidget {
 static const String routeName = '/onBoarding';
   @override
   Widget build(BuildContext context) {
-    return const OnBoardingViewBody();
+    return const Scaffold(
+   body:   OnBoardingViewBody()
+      
+    );
   }
 }
