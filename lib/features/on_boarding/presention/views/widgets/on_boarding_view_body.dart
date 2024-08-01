@@ -61,7 +61,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               child: CustomBotton(
                 text: " ابدأ الان",
                 onPressed: () {
-                  SharedPref.setBool(isOnBoardingView, true);
+                  SharedPref.setBool(kIsOnBoardingView, true);
                     Navigator.of(context).pushReplacementNamed(LoginView.routeName);
                   
                 },
