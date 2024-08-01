@@ -21,7 +21,7 @@ class ECommerce extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Cairo'
       ),
-       localizationsDelegates: [
+       localizationsDelegates:const [
                 S.delegate,
                 GlobalMaterialLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate,

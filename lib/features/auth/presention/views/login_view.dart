@@ -1,3 +1,4 @@
+import 'package:e_commerce/features/auth/presention/views/widgets/login_view_body.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatelessWidget {
@@ -5,8 +6,8 @@ class LoginView extends StatelessWidget {
 static const String routeName = '/login';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(),
+    return const Scaffold(
+      body: LoginViewBody(),
     );
   }
 }

@@ -42,7 +42,8 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   void excuteNavigation(){
     bool isOnBoardingView = SharedPref.getBool(kIsOnBoardingView); 
     Future.delayed(const Duration(seconds: 3), () {
-      if(isOnBoardingView){
+      if(isOnBoardingView
+      ){
         Navigator.pushReplacementNamed(context, LoginView.routeName);
       }
       else{
