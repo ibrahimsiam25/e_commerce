@@ -4,7 +4,11 @@ import 'package:e_commerce/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() {
+import 'core/services/shared_preferences_singleton.dart';
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await SharedPref.init();
   runApp(const ECommerce());
 }
 
@@ -14,6 +18,9 @@ class ECommerce extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Cairo'
+      ),
        localizationsDelegates: [
                 S.delegate,
                 GlobalMaterialLocalizations.delegate,
