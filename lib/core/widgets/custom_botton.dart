@@ -1,4 +1,5 @@
 import 'package:e_commerce/core/utils/app_color.dart';
+import 'package:e_commerce/core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class CustomBotton extends StatelessWidget {
@@ -17,7 +18,7 @@ class CustomBotton extends StatelessWidget {
             ),
             backgroundColor: AppColor.primaryColor),
           onPressed: onPressed,
-          child: Text(text,style: TextStyle(color: Colors.white,fontSize: 20 ),)),
+          child: Text(text,style:AppTextStyle.bold16.copyWith(color: Colors.white),)),
     );
   }
 }
