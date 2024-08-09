@@ -5,7 +5,8 @@ import 'package:e_commerce/features/auth/presention/views/widgets/custom_check_b
 
 
 class TermsAndConditionsWidget extends StatefulWidget {
-  const TermsAndConditionsWidget({super.key});
+  const TermsAndConditionsWidget({super.key, required this.onChanged});
+  final ValueChanged <bool> onChanged ;
 
   @override
   State<TermsAndConditionsWidget> createState() =>
@@ -21,6 +22,7 @@ class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
         CustomCheckBox(
           onChecked: (value) {
             isTermsAccepted = value;
+            widget.onChanged(value);
             setState(() {});
           },
           isChecked: isTermsAccepted,
