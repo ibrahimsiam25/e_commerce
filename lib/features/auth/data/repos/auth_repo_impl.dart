@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:dartz/dartz.dart';
 import '../../domian/repos/auth_repo.dart';
 import '../../../../core/errors/failure.dart';
@@ -14,13 +15,32 @@ class AuthRepoImpl extends AuthRepo {
   Future<Either<Failure, UserEntity>> createUser(
       String email, String password, String name) async {
     try {
-  var user = await firebaseAuthService
-      .createUser(email: email, password: password);
+      var user = await firebaseAuthService.createUser(
+          email: email, password: password);
       return Right(UserModel.fromFirebaseUser(user));
-} on CustomException catch (e) {
-  return Left(ServerFailure(errMessage: e.message));
-} catch (e) {
-  return Left(ServerFailure(errMessage: 'حدث خطأ ما رجاء المحاولة مرة اخرى')); 
-}
+    } on CustomException catch (e) {
+      return Left(ServerFailure(errMessage: e.message));
+    } catch (e) {
+      log('exception in auth repo impl with create user ${e.toString()}');
+      return Left(
+          ServerFailure(errMessage: 'حدث خطأ ما رجاء المحاولة مرة اخرى'));
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signIn(
+      String email, String password) async {
+    try {
+      var user =
+          await firebaseAuthService.signIn(email: email, password: password);
+      return Right(UserModel.fromFirebaseUser(user));
+    } on CustomException catch (e) {
+      return Left(ServerFailure(errMessage: e.message));
+    } catch (e) {
+      log('exception in auth repo impl with sign in ${e.toString()}');
+      return Left(
+        ServerFailure(errMessage: 'حدث خطأ ما رجاء المحاولة مرة اخرى'),
+      );
+    }
   }
 }

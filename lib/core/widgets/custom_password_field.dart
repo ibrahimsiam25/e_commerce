@@ -6,7 +6,7 @@ class CustomPasswoerdField extends StatefulWidget {
     super.key,
     this.onSaved,
   });
-  final void Function(String)? onSaved;
+  final void Function(String?)? onSaved;
 
   @override
   State<CustomPasswoerdField> createState() => _CustomPasswoerdFieldState();
@@ -17,7 +17,7 @@ class _CustomPasswoerdFieldState extends State<CustomPasswoerdField> {
   @override
   Widget build(BuildContext context) {
     return CustomTextField(
-      onSaved: (value) {},
+      onSaved: widget.onSaved,
       obscureText: obscureText,
       suffixIcon: GestureDetector(
         onTap: () {

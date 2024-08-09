@@ -20,7 +20,7 @@ class _SiginUpViewBodyState extends State<SiginUpViewBody> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   AutovalidateMode _autoValidateMode = AutovalidateMode.disabled;
   late String email, password, name;
-   bool isTermsAccepted =false;
+  bool isTermsAccepted = false;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -54,7 +54,7 @@ class _SiginUpViewBodyState extends State<SiginUpViewBody> {
               ),
               CustomPasswoerdField(
                 onSaved: (value) {
-                  password = value;
+                  password = value!;
                 },
               ),
               const SizedBox(
@@ -73,12 +73,14 @@ class _SiginUpViewBodyState extends State<SiginUpViewBody> {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
                     if (isTermsAccepted) {
-  context
-      .read<CreateUserCubit>()
-      .creatUser(email, password, name);
-}else{
-  customSnakBar(context,'يجب عليك الموافقة على الشروط والإحكام');
-}
+                      //! triger the cubit
+                      context
+                          .read<CreateUserCubit>()
+                          .creatUser(email, password, name);
+                    } else {
+                      customSnakBar(
+                          context, 'يجب عليك الموافقة على الشروط والإحكام');
+                    }
                   } else {
                     setState(() {
                       _autoValidateMode = AutovalidateMode.always;
