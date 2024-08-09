@@ -62,7 +62,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 text: " ابدأ الان",
                 onPressed: () {
                   SharedPref.setBool(kIsOnBoardingView, true);
-                    Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+                    Navigator.of(context).pushReplacementNamed(SignInView.routeName);
                   
                 },
               )),

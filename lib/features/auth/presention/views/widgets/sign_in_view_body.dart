@@ -8,11 +8,11 @@ import 'package:e_commerce/core/utils/app_text_style.dart';
 import 'package:e_commerce/core/widgets/custom_text_field.dart';
 import 'package:e_commerce/features/auth/presention/views/widgets/or_divider.dart';
 import 'package:e_commerce/features/auth/presention/views/widgets/dont_have_acount.dart';
-import 'package:e_commerce/features/auth/presention/views/widgets/soical_login_button.dart';
+import 'package:e_commerce/features/auth/presention/views/widgets/soical_sign_in_button.dart';
 
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class SignInViewBody extends StatelessWidget {
+  const SignInViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +71,7 @@ class LoginViewBody extends StatelessWidget {
        const SizedBox(
          height: 20,
        ),
-        SocialLoginButton(
+        SocialSignInButton(
                 onPressed: () {},
                 image: Assets.assetsImagesGoogleIcon,
                 
@@ -80,7 +80,7 @@ class LoginViewBody extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-              SocialLoginButton(
+              SocialSignInButton(
                 onPressed: () {},
                 image: Assets.assetsImagesApplIcon,
                 title: 'تسجيل بواسطة أبل',
@@ -88,7 +88,7 @@ class LoginViewBody extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-              SocialLoginButton(
+              SocialSignInButton(
                 onPressed: () {},
                 image: Assets.assetsImagesFacebookIcon,
                 title: 'تسجيل بواسطة فيسبوك',

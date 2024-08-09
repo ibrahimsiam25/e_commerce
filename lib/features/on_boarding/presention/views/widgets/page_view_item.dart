@@ -41,7 +41,7 @@ class PageViewItem extends StatelessWidget {
                   onTap: () {
                   SharedPref.setBool(kIsOnBoardingView, true);
 
-                    Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+                    Navigator.of(context).pushReplacementNamed(SignInView.routeName);
                   },
                   child: const Text(
                     "تخط",

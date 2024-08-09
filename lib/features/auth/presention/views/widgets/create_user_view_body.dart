@@ -9,14 +9,14 @@ import 'package:e_commerce/core/widgets/custom_text_field.dart';
 import 'package:e_commerce/features/auth/presention/views/widgets/have_an_account_widget.dart';
 import 'package:e_commerce/features/auth/presention/views/widgets/terms_and_condition_widget.dart';
 
-class SiginUpViewBody extends StatefulWidget {
-  const SiginUpViewBody({super.key});
+class CreateUserViewBody extends StatefulWidget {
+  const CreateUserViewBody({super.key});
 
   @override
-  State<SiginUpViewBody> createState() => _SiginUpViewBodyState();
+  State<CreateUserViewBody> createState() => _SiginUpViewBodyState();
 }
 
-class _SiginUpViewBodyState extends State<SiginUpViewBody> {
+class _SiginUpViewBodyState extends State<CreateUserViewBody> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   AutovalidateMode _autoValidateMode = AutovalidateMode.disabled;
   late String email, password, name;

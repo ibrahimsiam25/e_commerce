@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:e_commerce/core/widgets/Custom_appBar.dart';
 import 'package:e_commerce/core/services/get_it_service.dart';
 import 'package:e_commerce/features/auth/presention/manger/create_user/create_user_cubit.dart';
-import 'package:e_commerce/features/auth/presention/views/widgets/sign_up_view_bloc_consumer.dart';
+import 'package:e_commerce/features/auth/presention/views/widgets/create_user_view_bloc_consumer.dart';
 
 
 class SignUpView extends StatelessWidget {
@@ -18,7 +18,7 @@ class SignUpView extends StatelessWidget {
       ),
       child: Scaffold(
         appBar: customAppBar(title: 'انشاء حساب', context: context),
-        body:const SignnUpViewBlocConsumer(),
+        body:const CreateUserViewBlocConsumer(),
       ),
     );
   }
