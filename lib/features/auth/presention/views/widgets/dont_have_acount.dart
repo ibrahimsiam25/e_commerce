@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/app_color.dart';
 import '../../../../../core/utils/app_text_style.dart';
-import 'package:e_commerce/features/auth/presention/views/sign_up_view.dart';
+import 'package:e_commerce/features/auth/presention/views/create_user_view.dart';
 
 
 

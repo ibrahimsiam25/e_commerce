@@ -1,11 +1,11 @@
+import 'package:svg_flutter/svg.dart';
+import 'package:flutter/material.dart';
 import 'package:e_commerce/core/utils/assets.dart';
 import 'package:e_commerce/core/utils/constents.dart';
-import 'package:e_commerce/features/auth/presention/views/login_view.dart';
-import 'package:e_commerce/features/on_boarding/presention/views/on_boarding_view.dart';
-import 'package:flutter/material.dart';
-import 'package:svg_flutter/svg.dart';
-
 import '../../../../../core/services/shared_preferences_singleton.dart';
+import 'package:e_commerce/features/auth/presention/views/sign_in_view.dart';
+import 'package:e_commerce/features/on_boarding/presention/views/on_boarding_view.dart';
+
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});

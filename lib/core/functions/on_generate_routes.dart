@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:e_commerce/features/auth/presention/views/login_view.dart';
-import 'package:e_commerce/features/auth/presention/views/sign_up_view.dart';
+import 'package:e_commerce/features/auth/presention/views/sign_in_view.dart';
 import 'package:e_commerce/features/splash/presention/views/splash_view.dart';
+import 'package:e_commerce/features/auth/presention/views/create_user_view.dart';
 import 'package:e_commerce/features/on_boarding/presention/views/on_boarding_view.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
