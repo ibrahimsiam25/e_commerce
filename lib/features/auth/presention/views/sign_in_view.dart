@@ -6,6 +6,7 @@ import '../../../../core/widgets/custom_snack_bar.dart';
 import 'package:e_commerce/core/widgets/Custom_appBar.dart';
 import 'package:e_commerce/core/services/get_it_service.dart';
 import 'package:e_commerce/features/auth/presention/views/widgets/sign_in_view_body.dart';
+import 'package:e_commerce/features/auth/presention/views/widgets/sign_in_view_bloc_consumer.dart';
 
 class SignInView extends StatelessWidget {
   const SignInView({super.key});
@@ -16,21 +17,7 @@ class SignInView extends StatelessWidget {
       create: (context) => SignInCubit(getIt.get<AuthRepo>()),
       child: Scaffold(
         appBar: customAppBar(title: 'تسجيل الدخول', context: context),
-        body: BlocConsumer<SignInCubit, SignInState>(
-          listener: (context, state) {
-            if (state is SignInSuccess) {
-             
-            }
-            else if (state is SignInFailure) {
-            
-                customSnakBar(context, state.errorMessage);
-           
-            }
-          },
-          builder: (context, state) {
-            return const SignInViewBody();
-          },
-        ),
+        body:const SignInViewBlocConsumer(),
       ),
     );
   }
