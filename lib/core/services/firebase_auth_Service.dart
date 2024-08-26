@@ -85,4 +85,5 @@ Future<User> signInWithFacebook() async {
   // Once signed in, return the UserCredential
   return (await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential)).user!;  
 }
+
 }
