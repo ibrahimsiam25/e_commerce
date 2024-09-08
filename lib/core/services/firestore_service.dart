@@ -1,8 +1,10 @@
+import 'data_service.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../../features/auth/data/models/user_model.dart';
-import 'package:e_commerce/core/services/data_service.dart';
+import 'package:e_commerce/features/auth/data/models/user_model.dart';
+import 'package:e_commerce/features/auth/domain/entites/user_entity.dart';
 
-class FirestoreService implements DatabaseService {
+
+class FireStoreService implements DatabaseService {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   @override
   Future<void> addData(
@@ -10,7 +12,7 @@ class FirestoreService implements DatabaseService {
       required Map<String, dynamic> data,
       String? documentId}) async {
     if (documentId != null) {
-      await firestore.collection(path).doc(documentId).set(data);
+      firestore.collection(path).doc(documentId).set(data);
     } else {
       await firestore.collection(path).add(data);
     }
@@ -18,8 +20,15 @@ class FirestoreService implements DatabaseService {
 
   @override
   Future<Map<String, dynamic>> getData(
-      {required String path, required String documentId}) async {
-    var data = await firestore.collection(path).doc(documentId).get();
+      {required String path, required String docuementId}) async {
+    var data = await firestore.collection(path).doc(docuementId).get();
     return data.data() as Map<String, dynamic>;
+  }
+
+  @override
+  Future<bool> checkIfDataExists(
+      {required String path, required String docuementId}) async {
+    var data = await firestore.collection(path).doc(docuementId).get();
+    return data.exists;
   }
 }
