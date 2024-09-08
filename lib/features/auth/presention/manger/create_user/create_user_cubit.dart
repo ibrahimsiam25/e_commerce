@@ -11,7 +11,7 @@ class CreateUserCubit extends Cubit<CreateUserState> {
   final AuthRepo authRepo;
   Future<void> creatUser(String email,String password,String name)async{
     emit(CreateUserLoading());
-    final result = await authRepo.createUser(email, password, name);
+    final result = await authRepo.createUserWithEmailAndPassword(email, password, name);
     result.fold((l) {
       emit(CreateUserFailure(errorMessage: l.errMessage));
     }, (r) {

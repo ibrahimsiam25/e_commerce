@@ -5,7 +5,7 @@ import 'package:e_commerce/core/errors/excptions.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
 class FirebaseAuthService {
-  Future<User> createUser(
+  Future<User> createUserWithEmailAndPassword(
       {required String email, required String password}) async {
     try {
       final credential =
@@ -34,7 +34,7 @@ class FirebaseAuthService {
     }
   }
 
-  Future<User> signIn({required String email, required String password}) async {
+  Future<User>  signInWithEmailAndPassword({required String email, required String password}) async {
     try {
       final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email,
@@ -86,4 +86,7 @@ Future<User> signInWithFacebook() async {
   return (await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential)).user!;  
 }
 
+Future deleteUser() async {
+  await FirebaseAuth.instance.currentUser!.delete();
+}
 }
