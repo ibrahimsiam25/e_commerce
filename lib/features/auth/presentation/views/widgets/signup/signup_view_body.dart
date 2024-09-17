@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:e_commerce/constants.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/widgets/password_field.dart';
+import '../../../../../../core/widgets/password_field.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
 import 'package:e_commerce/core/widgets/custom_text_field.dart';
 import 'package:e_commerce/core/helper_functions/build_error_bar.dart';
 import 'package:e_commerce/features/auth/presentation/cubits/signup_cubits/signup_cubit.dart';
-import 'package:e_commerce/features/auth/presentation/views/widgets/terms_and_conditions.dart';
-import 'package:e_commerce/features/auth/presentation/views/widgets/have_an_account_widget.dart';
+import 'package:e_commerce/features/auth/presentation/views/widgets/signup/terms_and_conditions.dart';
+import 'package:e_commerce/features/auth/presentation/views/widgets/signup/have_an_account_widget.dart';
 
 
 class SignupViewBody extends StatefulWidget {

@@ -3,9 +3,11 @@ import 'package:svg_flutter/svg.dart';
 import 'package:flutter/material.dart';
 import '../../../../../constants.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../../core/utils/app_router.dart';
 import 'package:e_commerce/core/utils/app_text_styles.dart';
 import '../../../../../core/services/shared_preferences_singleton.dart';
-import 'package:e_commerce/features/auth/presentation/views/signin_view.dart';
+
 
 
 class PageviewItem extends StatelessWidget {
@@ -50,10 +52,7 @@ class PageviewItem extends StatelessWidget {
                 child: GestureDetector(
                   onTap: () {
                     Prefs.setBool(kIsOnBoardingViewSeen, true);
-
-                    Navigator.of(context).pushReplacementNamed(
-                      SigninView.routeName,
-                    );
+    GoRouter.of(context).push(AppRouter.kSigninView);
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(16),

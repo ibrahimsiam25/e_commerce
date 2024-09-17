@@ -1,7 +1,7 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'intl/messages_all.dart';
+import 'package:flutter/material.dart';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
 // Generator: Flutter Intl IDE plugin

@@ -9,9 +9,9 @@ import 'package:e_commerce/core/utils/app_text_styles.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
 import 'package:e_commerce/core/widgets/password_field.dart';
 import 'package:e_commerce/core/widgets/custom_text_field.dart';
-import 'package:e_commerce/features/auth/presentation/views/widgets/or_divider.dart';
+import 'package:e_commerce/features/auth/presentation/views/widgets/signin/or_divider.dart';
 import 'package:e_commerce/features/auth/presentation/cubits/signin_cubit/signin_cubit.dart';
-import 'package:e_commerce/features/auth/presentation/views/widgets/social_login_button.dart';
+import 'package:e_commerce/features/auth/presentation/views/widgets/signin/social_login_button.dart';
 
 
 

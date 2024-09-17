@@ -1,11 +1,12 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:go_router/go_router.dart';
 import 'package:e_commerce/constants.dart';
+import '../../../../../core/utils/app_router.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:e_commerce/core/utils/app_colors.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
-import '../../../../auth/presentation/views/signin_view.dart';
 import 'package:e_commerce/core/services/shared_preferences_singleton.dart';
 import 'package:e_commerce/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 
@@ -71,9 +72,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             child: CustomButton(
               onPressed: () {
                 Prefs.setBool(kIsOnBoardingViewSeen, true);
-                Navigator.of(context).pushReplacementNamed(
-                  SigninView.routeName,
-                );
+             GoRouter.of(context).push(AppRouter.kSigninView);
               },
               text: 'ابدأ الان',
             ),

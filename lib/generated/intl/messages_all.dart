@@ -1,3 +1,10 @@
+import 'dart:async';
+import 'package:intl/intl.dart';
+import 'package:flutter/foundation.dart';
+import 'messages_ar.dart' as messages_ar;
+import 'messages_en.dart' as messages_en;
+import 'package:intl/src/intl_helpers.dart';
+import 'package:intl/message_lookup_by_library.dart';
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
 // This is a library that looks up messages for specific locales by
 // delegating to the appropriate library.
@@ -9,15 +16,8 @@
 // ignore_for_file:prefer_single_quotes, prefer_generic_function_type_aliases
 // ignore_for_file:comment_references
 
-import 'dart:async';
 
-import 'package:flutter/foundation.dart';
-import 'package:intl/intl.dart';
-import 'package:intl/message_lookup_by_library.dart';
-import 'package:intl/src/intl_helpers.dart';
 
-import 'messages_ar.dart' as messages_ar;
-import 'messages_en.dart' as messages_en;
 
 typedef Future<dynamic> LibraryLoader();
 Map<String, LibraryLoader> _deferredLibraries = {
