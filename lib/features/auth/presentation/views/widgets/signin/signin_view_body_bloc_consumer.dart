@@ -20,7 +20,7 @@ class SigninViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<SigninCubit, SigninState>(
       listener: (context, state) {
         if (state is SigninSuccess) {
-             GoRouter.of(context).push(AppRouter.kHomeView);
+             GoRouter.of(context).go(AppRouter.kHomeView);
         }
 
         if (state is SigninFailure) {

@@ -7,7 +7,7 @@ import 'package:e_commerce/core/errors/failures.dart';
 abstract class AuthRepo {
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
       String email, String password, String name);
-
+ Future saveUserData({required UserEntity user});
   Future<Either<Failure, UserEntity>> signinWithEmailAndPassword(
       String email, String password);
 

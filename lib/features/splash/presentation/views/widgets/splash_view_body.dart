@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:e_commerce/constants.dart';
 import '../../../../../core/utils/app_router.dart';
 import 'package:e_commerce/core/utils/app_images.dart';
+import '../../../../../core/services/firebase_auth_service.dart';
 import '../../../../../core/services/shared_preferences_singleton.dart';
 
 
@@ -46,8 +47,14 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     bool isOnBoardingViewSeen =await Prefs.getBool(kIsOnBoardingViewSeen);
     Future.delayed(const Duration(seconds: 3), () {
       if (isOnBoardingViewSeen) {
-       // ignore: use_build_context_synchronously
-       GoRouter.of(context).go(AppRouter.kSigninView);
+         var isLoggedIn = FirebaseAuthService().isLoggedIn();
+        if (isLoggedIn) {
+            // ignore: use_build_context_synchronously
+          GoRouter.of(context).go(AppRouter.kHomeView);
+        } else {
+            // ignore: use_build_context_synchronously
+          GoRouter.of(context).go(AppRouter.kSigninView);
+        }
       } else {
         // ignore: use_build_context_synchronously
         GoRouter.of(context).go(AppRouter.kOnBoardingView);
